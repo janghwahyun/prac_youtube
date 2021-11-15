@@ -16,10 +16,8 @@ function App() {
       'https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResult=25&key=AIzaSyDcZ95PjpOXl2sifl-Zd_am8vLtdl7Mh8E',
       requestOptions
     )
-      .then(response => response.json())
-      //받아온 result에 itmes를 result에 할당
-      .then(result => setVideos(result.items))
-      //
+      .then(response => response.text())
+      .then(result => console.log(result))
       .catch(error => console.log('error', error));
   }, []);
   return <h1>다시 시작하는거야!</h1>;

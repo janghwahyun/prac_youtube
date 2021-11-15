@@ -17,9 +17,7 @@ function App() {
       requestOptions
     )
       .then(response => response.json())
-      //받아온 result에 itmes를 result에 할당
-      .then(result => setVideos(result.items))
-      //
+      .then(result => console.log(result))
       .catch(error => console.log('error', error));
   }, []);
   return <h1>다시 시작하는거야!</h1>;
