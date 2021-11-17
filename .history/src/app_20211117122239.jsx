@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import './app.css';
-import Videolist from './components/video_list/video_list';
+import VideoItem from './components/video_item/video_item';
+import videolist from './components/video_list/video_list';
 
 function App() {
   //데이터를 받아온 비디오 목록을 가질 수 있는 state.
@@ -24,7 +25,7 @@ function App() {
       //
       .catch(error => console.log('error', error));
   }, []);
-  return <Videolist videos={videos} />;
+  return <videolist videos={videos} />;
 }
 
 export default App;

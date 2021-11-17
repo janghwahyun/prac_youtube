@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import './app.css';
-import Videolist from './components/video_list/video_list';
 
 function App() {
   //데이터를 받아온 비디오 목록을 가질 수 있는 state.
@@ -19,12 +18,11 @@ function App() {
     )
       .then(response => response.json())
       //받아온 result에 itmes를 result에 할당
-      //그리고 videos가 업데이트 되면 video list컴포넌트에 전달하면 되겠지
       .then(result => setVideos(result.items))
       //
       .catch(error => console.log('error', error));
   }, []);
-  return <Videolist videos={videos} />;
+  return <h1>다시 시작하는거야!</h1>;
 }
 
 export default App;
