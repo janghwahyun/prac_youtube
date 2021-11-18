@@ -1,0 +1,7 @@
+비디오가 한 줄에 나와야 하니까 .video {
+  display: flex;
+  align-items: center;
+  border: 1px solid lightcoral;
+  cursor: pointer;
+  tan
+}

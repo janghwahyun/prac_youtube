@@ -1,0 +1,25 @@
+/* 비디오가 한 줄에 나와야 하니까  */
+.video {
+  display: flex;
+  align-items: center;
+  border: 1px solid lightcoral;
+  cursor: pointer;
+  transition: transform 250ms ease-in;
+}
+
+.video:hover {
+  transform: scale(1.02);
+}
+
+.thumbnails {
+  width: 40%;
+}
+
+.title,
+.chnnel {
+  margin: 0;
+}
+
+.chnnel {
+  font-size: 0.9rem;
+}

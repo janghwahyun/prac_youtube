@@ -6,14 +6,14 @@ import styles from './video_item.module.css';
 //snippet.thumbnails으로 줄여 쓸 수 있음
 const VideoItem = ({ video: { snippet } }) => (
   <li className={styles.container}>
-    <div className={styles.video}>
+    <div>
       <img
         className={styles.thumbnail}
         src={snippet.thumbnails.medium.url}
         alt="video thumnail"
       />
 
-      <div className={styles.metadata}>
+      <div>
         <p className={styles.title}>{snippet.title}</p>
         <p className={styles.channel}>{snippet.channelTitle}</p>
       </div>
