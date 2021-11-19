@@ -11,8 +11,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-/* 앱이 root컨테이너에 들어 있으니까 */
-#root {
-  display: flex;
-  justify-content: center;
-}
