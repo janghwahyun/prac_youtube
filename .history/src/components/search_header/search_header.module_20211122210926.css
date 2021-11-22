@@ -18,12 +18,5 @@
   outline: 0;
 }
 .button {
-  background-color: darkgray;
-  outline: 0;
-}
-
-.buttomImg {
-  height: 100%;
-  padding: 0.5em 0.2em;
-  outline: 0;
+  background-color: darkblue;
 }
