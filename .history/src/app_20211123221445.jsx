@@ -6,22 +6,23 @@ import Videolist from './components/video_list/video_list';
 function App() {
   //데이터를 받아온 비디오 목록을 가질 수 있는 state.
   const [videos, setVideos] = useState([]);
-  const search = query => {
+  const search = (.googleapis.com/youtube/v3/search?part=snippet&maxResult=25&q=${}&key=AIzaSyDcZ95PjpOXl2sifl-Zd_am8vLtdl7Mh8E`,
+     |                                                                                       ^
+  18 |       requestOptions
+  19 |     )
+  20 |       .then(response => response. json())
+) => {
     const requestOptions = {
       method: 'GET',
       redirect: 'follow',
     };
 
     fetch(
-      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResult=25&q=${query}&type=&key=AIzaSyDcZ95PjpOXl2sifl-Zd_am8vLtdl7Mh8E`,
+      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResult=25&q=${query}&key=AIzaSyDcZ95PjpOXl2sifl-Zd_am8vLtdl7Mh8E`,
       requestOptions
     )
       .then(response => response.json())
-      //기존의 item정보를 유지하고 아이디만 오브젝트가 아니라 item에 있는 videoId로 덮어줄거임
-      .then(result =>
-        result.items.map(item => ({ ...item, id: item.id.videoId }))
-      )
-      .then(items => setVideos(items))
+      .then(result => setVideos(result.items))
       .catch(error => console.log('error', error));
   };
 
@@ -45,7 +46,6 @@ function App() {
   }, []);
   return (
     <div className={styles.app}>
-      {/* onserch가 발생하면 search를 호출해 주면 되겠죠 */}
       <SearchHeader onSearch={search} />
       <Videolist videos={videos} />
     </div>

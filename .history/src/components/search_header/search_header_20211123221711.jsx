@@ -7,9 +7,8 @@ const SearchHeader = ({}) => {
   //input의 입력된 값을 알아와야 하지 그러려면 useref를 이용
   const inputRef = useRef();
 
-  const handleSearch = ({ onSearch }) => {
+  const handleSearch = () => {
     const value = inputRef.current.value;
-    onSearch(value);
   };
   const onClick = () => {
     handleSearch();
