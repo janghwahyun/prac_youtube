@@ -29,8 +29,7 @@ class Youtube {
         .then(response => response.json())
         //기존의 item정보를 유지하고 아이디만 오브젝트가 아니라 item에 있는 videoId로 덮어줄거임
         .then(result =>
-          result.items.map(item => ({ ...item, id: item.id.videoId }))
-        )
+          result.items.map(item => ({ ...item, id: item.id.videoId })
     );
   }
 }

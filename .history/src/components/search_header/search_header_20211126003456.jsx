@@ -9,7 +9,7 @@ const SearchHeader = ({ onSearch }) => {
 
   const handleSearch = () => {
     const value = inputRef.current.value;
-    onSearch(value);
+    // onSearch(value);
   };
   const onClick = () => {
     handleSearch();

@@ -7,9 +7,10 @@ function App({ youtube }) {
   //데이터를 받아온 비디오 목록을 가질 수 있는 state.
   const [videos, setVideos] = useState([]);
   const search = query => {
-    youtube
-      .search(query) //
-      .then(videos => setVideos(videos));
+      youtube
+        .search(query) //
+        .then(videos => setVideos(videos));
+    };
   };
 
   //원하는 함수를 등록해 놓으면 컴포넌트가 마운트가 되었거나 업데이트 될 때마다 호출함.

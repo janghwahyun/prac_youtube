@@ -3,13 +3,13 @@ import styles from './search_header.module.css';
 //컴포넌트 안에서 버튼이 눌러 졌는지 엔터키가 쳐서 검색이 됐는지 상관없고
 //검색이라는 이벤트가 발생하면 내가 전달해주는 콜백함수를 불러라고
 //props으로 전달받음
-const SearchHeader = ({ onSearch }) => {
+const SearchHeader = () => {
   //input의 입력된 값을 알아와야 하지 그러려면 useref를 이용
   const inputRef = useRef();
 
   const handleSearch = () => {
     const value = inputRef.current.value;
-    onSearch(value);
+    // onSearch(value);
   };
   const onClick = () => {
     handleSearch();
