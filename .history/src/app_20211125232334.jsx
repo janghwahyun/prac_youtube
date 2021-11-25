@@ -8,17 +8,13 @@ function App({ youtube }) {
   const [videos, setVideos] = useState([]);
   const search = query => {
     const search = query => {
-      youtube
-        .search(query) //
-        .then(videos => setVideos(videos));
+      youtube.search(query).then(console.log);
     };
   };
 
   //원하는 함수를 등록해 놓으면 컴포넌트가 마운트가 되었거나 업데이트 될 때마다 호출함.
   useEffect(() => {
-    youtube
-      .mostPopular() //
-      .then(videos => setVideos(videos));
+    youtube.mostPopular().then(console.log);
   }, []);
   return (
     <div className={styles.app}>

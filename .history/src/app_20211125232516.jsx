@@ -8,9 +8,7 @@ function App({ youtube }) {
   const [videos, setVideos] = useState([]);
   const search = query => {
     const search = query => {
-      youtube
-        .search(query) //
-        .then(videos => setVideos(videos));
+      youtube.search(query).then(console.log);
     };
   };
 
@@ -18,7 +16,7 @@ function App({ youtube }) {
   useEffect(() => {
     youtube
       .mostPopular() //
-      .then(videos => setVideos(videos));
+      .then(console.log);
   }, []);
   return (
     <div className={styles.app}>

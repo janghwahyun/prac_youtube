@@ -27,6 +27,7 @@ const SearchHeader = ({}) => {
         <h1 className={styles.title}>YouTube</h1>
       </div>
       <input
+        //요거 넣어줘야지
         ref={inputRef}
         className={styles.input}
         type="search"
