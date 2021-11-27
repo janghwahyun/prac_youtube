@@ -7,10 +7,7 @@ import VideoDetail from './video_detail/video_detail';
 function App({ youtube }) {
   //데이터를 받아온 비디오 목록을 가질 수 있는 state.
   const [videos, setVideos] = useState([]);
-  const [selectedVideo, setSelectedVideo] = useState(null);
-  const selectVideo = video => {
-    setSelectedVideo(video);
-  };
+  const [setedVideo, setSelectedVideo] = useState(null);
   const search = query => {
     youtube
       .search(query) //
@@ -27,12 +24,8 @@ function App({ youtube }) {
     <div className={styles.app}>
       {/* onserch가 발생하면 search를 호출해 주면 되겠죠 */}
       <SearchHeader onSearch={search} />
-      <section className={styles.content}>
-        <div className={styles.detail}>
-          {selectedVideo && <VideoDetail video={selectedVideo} />}
-        </div>
-        <Videolist videos={videos} onVideoClick={selectVideo} />
-      </section>
+      {setSelectedVideo && <VideoDetail />}
+      <Videolist videos={videos} />
     </div>
   );
 }

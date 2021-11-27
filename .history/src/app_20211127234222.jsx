@@ -28,9 +28,7 @@ function App({ youtube }) {
       {/* onserch가 발생하면 search를 호출해 주면 되겠죠 */}
       <SearchHeader onSearch={search} />
       <section className={styles.content}>
-        <div className={styles.detail}>
-          {selectedVideo && <VideoDetail video={selectedVideo} />}
-        </div>
+        {selectedVideo && <VideoDetail video={selectedVideo} />}
         <Videolist videos={videos} onVideoClick={selectVideo} />
       </section>
     </div>

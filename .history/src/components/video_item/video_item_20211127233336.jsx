@@ -5,7 +5,7 @@ import styles from './video_item.module.css';
 // {video : {snippet}}을 props대신 적용시키면 ->
 //snippet.thumbnails으로 줄여 쓸 수 있음
 const VideoItem = ({ video, video: { snippet }, onVideoClick }) => (
-  <li className={styles.container} onClick={() => onVideoClick(video)}>
+  <li className={styles.container} onClick={()=>}>
     <div className={styles.video}>
       <img
         className={styles.thumbnail}
