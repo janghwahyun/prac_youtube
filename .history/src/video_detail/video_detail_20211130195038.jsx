@@ -15,8 +15,7 @@ const VideoDetail = ({ video, video: { snippet } }) => (
     ></iframe>
     <h2>{snippet.title}</h2>
     <h3>{snippet.channelTitle}</h3>
-    {/* pre태그는 텍스트가 연결되어 있으면 원래 공간을 넘어가는 현상이 발생 -> css 해결 가능 */}
-    <pre className={styles.description}>{snippet.description}</pre>
+    <pre>{snippet.description}</pre>
   </section>
 );
 

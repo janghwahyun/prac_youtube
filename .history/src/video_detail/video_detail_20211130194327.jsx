@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './video_detail.module.css';
 
 //선택된 비디오
-const VideoDetail = ({ video, video: { snippet } }) => (
+const VideoDetail = ({ video }) => (
   <section className={styles.detail}>
     <iframe
       className={styles.video}
@@ -13,10 +13,9 @@ const VideoDetail = ({ video, video: { snippet } }) => (
       frameborder="0"
       allowfullscreen
     ></iframe>
-    <h2>{snippet.title}</h2>
-    <h3>{snippet.channelTitle}</h3>
-    {/* pre태그는 텍스트가 연결되어 있으면 원래 공간을 넘어가는 현상이 발생 -> css 해결 가능 */}
-    <pre className={styles.description}>{snippet.description}</pre>
+    <h2>{video.snippet.title}</h2>
+    <h3>{video.snippet.channelTitle}</h3>
+    <pre>{video.snippet.description}</pre>
   </section>
 );
 

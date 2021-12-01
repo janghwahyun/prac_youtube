@@ -5,12 +5,7 @@ import styles from './video_list.module.css';
 const Videolist = ({ videos, onVideoClick, display }) => (
   <ul className={styles.videos}>
     {videos.map(video => (
-      <VideoItem
-        key={video.id}
-        video={video}
-        onVideoClick={onVideoClick}
-        display={display}
-      /> //뱅글뱅글 돈 video를 전달할거임.
+      <VideoItem key={video.id} video={video} onVideoClick={onVideoClick} /> //뱅글뱅글 돈 video를 전달할거임.
     ))}
   </ul>
 );

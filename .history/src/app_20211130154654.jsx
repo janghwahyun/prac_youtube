@@ -15,10 +15,7 @@ function App({ youtube }) {
   const search = query => {
     youtube
       .search(query) //
-      .then(videos => {
-        setVideos(videos);
-        setSelectedVideo(null);
-      });
+      .then(videos => setVideos(videos));
   };
 
   //원하는 함수를 등록해 놓으면 컴포넌트가 마운트가 되었거나 업데이트 될 때마다 호출함.
@@ -32,18 +29,11 @@ function App({ youtube }) {
       {/* onserch가 발생하면 search를 호출해 주면 되겠죠 */}
       <SearchHeader onSearch={search} />
       <section className={styles.content}>
-        {selectedVideo && (
-          <div className={styles.detail}>
-            <VideoDetail video={selectedVideo} />
-          </div>
-        )}
-
+        <div className={styles.detail}>
+          <VideoDetail video={selectedVideo} />
+        </div>
         <div className={styles.Videolist}>
-          <Videolist
-            videos={videos}
-            onVideoClick={selectVideo}
-            display={selectedVideo ? 'list' : 'grid'}
-          />
+          <Videolist videos={videos} onVideoClick={selectVideo} />
         </div>
       </section>
     </div>
