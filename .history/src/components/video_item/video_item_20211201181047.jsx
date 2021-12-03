@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import styles from './video_item.module.css';
 
 //props.video.snippet.thumbnails 이렇게 써도 되고

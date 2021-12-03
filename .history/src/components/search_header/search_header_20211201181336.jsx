@@ -19,7 +19,7 @@ const SearchHeader = memo(({ onSearch }) => {
       handleSearch();
     }
   };
-  console.log('header!!!');
+  console.log('header');
   return (
     <header className={styles.header}>
       <div className={styles.logo}>

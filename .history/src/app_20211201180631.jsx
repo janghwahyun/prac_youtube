@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './app.module.css';
 import SearchHeader from './components/search_header/search_header';
 import Videolist from './components/video_list/video_list';
@@ -12,14 +12,14 @@ function App({ youtube }) {
     setSelectedVideo(video);
   };
 
-  const search = useCallback(query => {
+  const search = query => {
     youtube
       .search(query) //
       .then(videos => {
         setVideos(videos);
         setSelectedVideo(null);
       });
-  });
+  };
 
   //원하는 함수를 등록해 놓으면 컴포넌트가 마운트가 되었거나 업데이트 될 때마다 호출함.
   useEffect(() => {
