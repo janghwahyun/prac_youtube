@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 class Youtube {
-  constructor(httpClient) {
-    this.youtube = httpClient;
+  constructor(key) {
+    this.youtube.httpClient;
   }
 
   async mostPopular() {

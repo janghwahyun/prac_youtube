@@ -4,7 +4,6 @@ import './index.css';
 import App from './app';
 import reportWebVitals from './reportWebVitals';
 import Youtube from './service/youtube';
-import axios from 'axios';
 
 const httpClient = axios.create({
   baseURL: 'https://youtube.googleapis.com/youtube/v3',
